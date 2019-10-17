@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "a85e103e-1518-480b-b3b2-d059300fc27e",
+		"name": "ipapi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create IPs",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "text/plain",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "192.168.100.14/24",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": "localhost:8080/api/v1/create"
+			},
+			"response": []
+		},
+		{
+			"name": "Acquire IP",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "text/plain",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "192.168.100.1",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": "localhost:8080/api/v1/acquire"
+			},
+			"response": []
+		},
+		{
+			"name": "Release IP",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "text/plain",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "192.168.100.1",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": "localhost:8080/api/v1/release"
+			},
+			"response": []
+		},
+		{
+			"name": "List Ips",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "text/plain",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "192.168.100.1",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": "localhost:8080/api/v1/list"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
