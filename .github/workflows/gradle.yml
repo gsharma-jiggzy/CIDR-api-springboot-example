@@ -21,3 +21,5 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
+    - name: show password
+      run: echo ${{ secrets.ANSIBLE_PASS }}
