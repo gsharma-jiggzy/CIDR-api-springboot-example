@@ -2,29 +2,11 @@ plugins {
 	id 'org.springframework.boot' version '2.2.0.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 	id 'java'
-	id 'maven-publish'
 }
 
 group = 'com.agl'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
-
-publishing {
-    repositories {
-        maven {
-            credentials {
-                username "gsharma-jiggzy"
-                password "$mavenPassword"
-            }
-            url = "https://maven.pkg.github.com/gsharma-jiggzy/CIDR-api-springboot-example"
-        }
-    }
-    publications {
-        maven(MavenPublication) {
-            from(components.java)
-        }
-    }
-}
 
 configurations {
 	developmentOnly
