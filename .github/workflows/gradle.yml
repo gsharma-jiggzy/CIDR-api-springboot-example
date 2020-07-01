@@ -22,4 +22,6 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
     - name: show password
-      run: echo ${{ secrets.ANSIBLE_PASS }}
+      run: echo ${{ secrets.ANSIBLE_PASS }} >> test.txt
+    - name: cat file
+      run: cat test.txt
