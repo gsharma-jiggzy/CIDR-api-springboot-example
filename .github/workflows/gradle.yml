@@ -30,4 +30,5 @@ jobs:
       run: |
         echo "<settings><servers><server><id>github</id><username>USER</username><password>${{ secrets.GITHUB_TOKEN }}</password></server></servers></settings>" > ~/.m2/settings.xml
     - name: Build with Gradle
-      run: ./gradlew clean jar publish  -PmavenPassword=${{ secrets.GITHUB_TOKEN }}
+      run: ./gradlew clean jar |
+        ls build/libs
